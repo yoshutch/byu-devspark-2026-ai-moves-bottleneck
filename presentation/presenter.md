@@ -111,3 +111,8 @@
       - Yes operating expense increased, but so did our value
 - Close with: “Find the constraint. Improve the system around it. Use AI where it actually helps.”
 - End with the mission question: “What would help our software move students and faculty toward learning, excellence, and their full potential?”
+
+## 16 - End
+- The biggest takeaways I want you to leave with are:
+	- Software development is more than just coding, to be "productive" you must incorporate all the different aspects of software development lifecycle
+	- Keep in mind the bigger picture: how does your work contribute to BYU's goal?
