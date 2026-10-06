@@ -1,13 +1,12 @@
 # Presenter Notes
 1. Load Shapez game before presentation starts
+2. Open screen capture video
+3. Start demo code `go run .`
 
 ## 02 — AI Wrote the Code
 
-- Start with the small demo codebase (TODO) and the feature request.
-- Give the request to Codex and let it work visibly if the demo is reliable.
-- If the live demo is risky, use a prepared recording or prepared result.
-- Ask how long the implementation took, then pause before discussing quality.
-- Transition with: “The code was produced quickly. Is the feature ready?”
+- Start with the small demo codebase: Advisement appointment API
+- Show the video of Codex adding a new feature
 
 ## 03 — Is It Ready?
 
@@ -27,6 +26,7 @@
 
 ## 05 — The DevSecOps Software Lifecycle
 
+- Now, let's tie manufacturing into software!
 - This is a DevSecOps view of the Software Development Lifecycle
 - Ask: "What else goes into developing a working piece of software?"
 - Ask the audience which stage usually takes the longest in their work.
@@ -40,31 +40,38 @@
 - Frederick P. Brooks, Jr. wrote a paper in 1986 entitled "No Silver Bullet", full quote:
 > There is no single development, in either technology or management technique, which by itself promises even one order-of-magnitude improvement within a decade in productivity, in reliability, in simplicity.
 
-- Clarify that these research findings do not prove AI can never help; they show that productivity gains are conditional and must be measured across the whole lifecycle.
+- Some research findings here are a bit dated and AI models have improved a lot since then.
+- Still this is only supposed to highlight that when AI is used to primarily improve only one portion of the development lifecycle, the gains are not what we expect.
+
+- "Let's take a step back and ask ourselves a more fundamental question"
 
 ## 08 - What Is the Goal?
 - Write down their ideas
 
 ## 09 — The Goal: Improve the Flow
 
-- Introduce *The Goal* as a story about a manufacturing plant, but emphasize that the lesson applies to any system with work flowing through it.
+- Introduce *The Goal* as a story about a manufacturing plant, but the lessons apply to any system with work flowing through it.
 - Productive = anything that moves towards The Goal
-- Highlight that keeping every station busy is not the same as delivering more valuable outcomes.
+- Keeping every station busy is not the same as delivering more valuable outcomes.
 - Jump back to Shapez
 	- Show the throughput (should be about 1/s still)
 	- Show the bottleneck (at the cutters) = large pile of materials is inventory
 	- "We increased operating expense by increasing the number of painter machines"
 	- How does this factory equate to software development?
-- What is BYU's goal?
+- In most companies the goal is to **make money**
+- What is BYU's goal? Anyone have a guess or have it memorized?
 
 ## 10 — BYU's Goal
 
 - Clarify that this is the goal for this talk—not maximizing lines of code, story points, or software throughput for its own sake.
 - Ask: “What does your software make possible for students and faculty?”
 - Share an example from BYU systems study abroad:
-	- I used to work on a web application that facilitated the process to apply for international study abroad programs. The features we added or improved on that system had an impact towards students' progression, specifically the "Strengthen the student experience" strategic objective.
+	- I used to work on a web application that facilitated the process to apply for international study abroad programs.
+  	The features we added to that system had an impact towards students' progression, specifically the "Strengthen the student experience" strategic objective.
+
 ## 11 — Plan, Code, & Build
 
+- Let's jump back to DevSecOps software lifecycle!
 - Ask: “How often do we discover the real business rule after development has started?”
 - Ask: "How many of you have asked if what you're working on has any real value to the University? To its goal?" - sometimes the less things we build, the more value we add
 - Connect this slide to the Shapez developer station: if coding accelerates, architecture, CI capacity, and the feedback loop may become the constraint.
@@ -85,8 +92,10 @@
 
 ## 14 — Find the Constraint
 
+- What are some ways we can find the constraints or bottlenecks?
 - Ask the audience where work waits in their systems: pull-request review, security findings, UAT, CI runners, release approvals, or operational response.
-- Point out the five signals: aging queues, rework, scarce capacity, slow feedback, and consumed capacity.
+- You can use methodologies like DDD, TDD, Team Topologies, Agile etc. Things we've learned for years that are all trying to solve aspects of accomplishing the goal.
+  - These can be used to address different symptoms of bottlenecks, so understand these patterns and match the pattern that fits your constraint
 - Use the question: “If code generation becomes ten times faster, where does the extra work wait?”
 
 ## 15 — Improve the System
@@ -96,5 +105,9 @@
 	1. Remove unnecessary work before the constraint = remove extra stars.
 	2. Filter defective inputs before they consume bottleneck capacity = remove random squares.
 	3. Increase flow through the constraint = fix the cutter station.
+	- Now you can see there's a more steady flow going into other parts of the system, we can see the throughput increase
+      - Throughput should be close to 2/s
+      - Inventory should be flowing constantly, less stagnant piles before machines
+      - Yes operating expense increased, but so did our value
 - Close with: “Find the constraint. Improve the system around it. Use AI where it actually helps.”
 - End with the mission question: “What would help our software move students and faculty toward learning, excellence, and their full potential?”
