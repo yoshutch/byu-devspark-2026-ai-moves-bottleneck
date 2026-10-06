@@ -9,3 +9,7 @@
 
 ## Demo Code
 A demo web server to simulate an API used in the demo of the presentation.
+
+Run the server from `demo/` with `go run .`, then open `http://localhost:8080/` to
+use the browser form for requesting an advisement appointment. The form uses the
+demo `demo-student` bearer token by default.
