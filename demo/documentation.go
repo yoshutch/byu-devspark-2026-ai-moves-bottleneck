@@ -15,6 +15,9 @@ var openAPISpec []byte
 //go:embed docs.html
 var docsHTML []byte
 
+//go:embed form.html
+var appointmentFormHTML []byte
+
 type problemDocumentation struct {
 	Type        string `json:"type"`
 	Title       string `json:"title"`
@@ -100,8 +103,14 @@ func registerProblemRoutes(mux *http.ServeMux) {
 }
 
 func registerAPIDocumentationRoutes(mux *http.ServeMux) {
+	mux.HandleFunc("GET /{$}", appointmentFormHandler)
 	mux.HandleFunc("GET /openapi.json", openAPISpecHandler)
 	mux.HandleFunc("GET /docs", apiDocsHandler)
+}
+
+func appointmentFormHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	_, _ = w.Write(appointmentFormHTML)
 }
 
 func openAPISpecHandler(w http.ResponseWriter, r *http.Request) {
